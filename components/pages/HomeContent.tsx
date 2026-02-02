@@ -1,18 +1,16 @@
 'use client';
 
 import React from 'react';
-import { BentoGrid } from '../components/BentoGrid';
+import { BentoGrid } from '../BentoGrid';
 import { motion } from 'framer-motion';
 import { Terminal, Cpu, Code2, ArrowRight, ShieldCheck, Zap, Layers, Workflow, CheckCircle2, Database, MessageSquareQuote } from 'lucide-react';
-import { Link } from '../components/Link';
+import { Link } from '../Link';
 
-export default function Home() {
+export const HomeContent = () => {
   return (
     <div className="space-y-32">
-      {/* Hero Section */}
       <BentoGrid />
 
-      {/* Infinite Scroll Tech Stack */}
       <div className="w-full overflow-hidden border-y border-white/5 bg-white/5 py-10 backdrop-blur-sm relative">
         <div className="absolute inset-0 bg-gradient-to-r from-[#020617] via-transparent to-[#020617] z-10 pointer-events-none" />
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
@@ -29,7 +27,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* The Techryx Protocol */}
       <div className="relative max-w-6xl mx-auto px-4">
          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The Techryx Protocol</h2>
@@ -91,8 +88,7 @@ export default function Home() {
          </div>
       </div>
 
-      {/* Client Transmissions */}
-      <div className="w-full hidden bg-[#030712] border-y border-white/5 py-24 relative overflow-hidden">
+      <div className="w-full bg-[#030712] border-y border-white/5 py-24 relative overflow-hidden">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan/5 rounded-full blur-[100px] pointer-events-none" />
           <div className="max-w-7xl mx-auto px-4 relative z-10">
              <div className="flex items-center gap-3 mb-12">
@@ -143,7 +139,6 @@ export default function Home() {
           </div>
       </div>
 
-      {/* Trust / Security Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-y border-white/10 bg-slate-900/20">
             <div className="p-12 md:p-24 border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-center">
                 <ShieldCheck className="w-16 h-16 text-emerald-500 mb-8" />
@@ -184,7 +179,6 @@ export default function Home() {
             </div>
       </div>
 
-      {/* CTA Section */}
       <div className="relative rounded-[2.5rem] overflow-hidden mx-4 md:mx-0">
          <div className="absolute inset-0 bg-gradient-to-r from-cyan/20 to-blue-600/20" />
          <div className="absolute inset-0 bg-[#020617] m-[1px] rounded-[2.5rem]" />
@@ -208,4 +202,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
