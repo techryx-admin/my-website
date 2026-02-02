@@ -3,6 +3,7 @@ import { Navbar } from '../components/Navbar';
 import { BackgroundEffects } from '../components/BackgroundEffects';
 import { Footer } from '../components/Footer';
 import Loading from './loading';
+import { Analytics } from "@vercel/analytics/react"; // <--- 1. Import added here
 
 export const metadata = {
   title: 'Techryx | Future Engineering',
@@ -87,6 +88,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <Analytics /> {/* <--- 2. Component added here */}
       </body>
     </html>
   );
